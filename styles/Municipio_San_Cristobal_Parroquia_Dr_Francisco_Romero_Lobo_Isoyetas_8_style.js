@@ -1,0 +1,28 @@
+var size = 0;
+var placement = 'point';
+
+var style_Municipio_San_Cristobal_Parroquia_Dr_Francisco_Romero_Lobo_Isoyetas_8 = function(feature, resolution){
+    var context = {
+        feature: feature,
+        variables: {}
+    };
+    var value = ""
+    var labelText = "";
+    size = 0;
+    var labelFont = "10px, sans-serif";
+    var labelFill = "rgba(0, 0, 0, 1)";
+    var textAlign = "left";
+    var offsetX = 8;
+    var offsetY = 3;
+    var placement = 'line';
+    if ("" !== null) {
+        labelText = String("");
+    }
+    var style = [ new ol.style.Style({
+        stroke: new ol.style.Stroke({color: 'rgba(83,63,212,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 0}),
+        text: createTextStyle(feature, resolution, labelText, labelFont,
+                              labelFill, placement)
+    })];
+
+    return style;
+};
